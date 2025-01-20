@@ -1,4 +1,8 @@
-﻿namespace DCEvaluacion3P
+﻿using DCEvaluacion3P.Views;
+
+
+namespace DCEvaluacion3P
+
 {
     public partial class App : Application
     {
@@ -6,7 +10,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new DCCatApiView());
         }
     }
 }

@@ -17,7 +17,10 @@ public partial class DCCatApiView : ContentPage
 			{
 				var DCDetallesCat = new DCDetallesCat();
 				var CatDetallesViewModel = (DCCatDetallesViewModel)DCDetallesCat.BindingContext;
+				CatDetallesViewModel.initialize(gatSelec);
+				await Navigation.PushAsync(DCDetallesCat);
 			}
+			((CollectionView)sender).SelectedItem = null;
 		}
 	}
 }
